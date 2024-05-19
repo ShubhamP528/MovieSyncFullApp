@@ -1,6 +1,7 @@
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
+const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
@@ -20,7 +21,6 @@ const { dbconnect } = require("./config/dbConnect");
 const authRoutes = require("./routes/authRoutes");
 const roomRoutes = require("./routes/roomRoutes");
 
-const cors = require("cors");
 const requireAuth = require("./middleware/requiredAuth");
 
 // Allow requests from the specified- origin

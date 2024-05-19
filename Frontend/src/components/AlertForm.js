@@ -56,7 +56,7 @@ const AlertForm = ({ onClose }) => {
     const newCode = generateRoomCode();
     axios
       .post(
-        `${window.location.origin}api/room/update`,
+        `${window.location.origin}/api/room/update`,
         {
           room: newCode,
           username: TheatorUser.username,
